@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+cd "$(dirname "$0")" && cd ../
+
+echo "Running unit tests…" &&
+	echo "\n"
+	echo " gleam test --target javascript $@" &&
+	gleam test --target javascript "$@" &&
+	echo "\n"
+	echo " gleam test --target erlang $@" &&
+	gleam test --target erlang "$@" &&
+	exit
