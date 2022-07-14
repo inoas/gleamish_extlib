@@ -46,13 +46,13 @@ pub fn multiply_test() {
 
 pub fn subtract_test() {
   int.subtract(-1, -1)
-  |> should.equal(-2)
-
-  int.subtract(1, -1)
   |> should.equal(0)
 
+  int.subtract(1, -1)
+  |> should.equal(2)
+
   int.subtract(0, -1)
-  |> should.equal(-1)
+  |> should.equal(1)
 
   int.subtract(0, 0)
   |> should.equal(0)
