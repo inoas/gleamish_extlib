@@ -1,7 +1,13 @@
 pub fn unix_timestamp() {
-  todo
+  do_unix_timestamp()
 }
 
-pub fn operating_system() {
-  todo
+if erlang {
+  external fn do_unix_timestamp() -> Int =
+    "extlib" "unix_timestamp"
+}
+
+if javascript {
+  external fn do_unix_timestamp() -> Int =
+    "../extlib.mjs" "unix_timestamp"
 }
