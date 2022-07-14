@@ -3,17 +3,17 @@
 [![Package Version](https://img.shields.io/hexpm/v/extlib)](https://hex.pm/packages/extlib)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/extlib/)
 -->
-A Gleam library having features that could be in gleam_stdlib - or not ;-):
+A Gleam library having features that could be in gleam_stdlib - or not ;-).
 
 All functions should run on all targets as good as possible: Erlang, NodeJS and Browsers.
 
-Features:
+Current features:
 
 - basic interger and float calculation to be used in pipelines: add, multiply, subtract (divide is available in gleam_stdlib)
 - system unix timestamp
 - operating system name and version
 
-TODO:
+Possible future features:
 
 - extended number types that only work around the Result type and return Errors if boundaries are exeecded (including BigInt support)
 - aliases or implementations for common functions available in Python, JavaScript, PHP
