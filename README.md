@@ -7,7 +7,7 @@ A Gleam library having features that could be in gleam_stdlib - or not ;-).
 
 All functions should run on all targets as good as possible: Erlang, NodeJS and Browsers.
 
-For current features, see [CHANGELOG.md](Changelog).
+For current features, see [./CHANGELOG.md](Changelog).
 
 Possible future features:
 
