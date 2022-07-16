@@ -1,6 +1,6 @@
 # Changelog
 
-## Unversioned
+## 0.1.0
 
 - basic interger and float calculation to be used in pipelines: add, multiply, subtract (divide is available in gleam_stdlib)
 - system unix timestamp
