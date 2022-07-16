@@ -2,6 +2,9 @@
 //// Utilizes erlang's array and JavaScripts array type
 ////
 
+// TODO: docblocks
+// TODO: functions: length, fold, fold_right
+
 pub external type Array(any)
 
 pub fn new() -> Array(any) {
