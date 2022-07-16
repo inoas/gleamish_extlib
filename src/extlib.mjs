@@ -44,6 +44,14 @@ export function array_count(arr) {
 	return arr.reduce(function (acc, val) { return val ? acc + 1 : acc; }, 0);
 };
 
+export function array_reduce(arr, acc, fn) {
+  return arr.reduce(fn, acc);
+}
+
+export function array_reduce_right(arr, acc, fn) {
+  return arr.reduceRight(fn, acc);
+}
+
 function operating_system_name() {
 	const os = require('os');
 	return os.platform();

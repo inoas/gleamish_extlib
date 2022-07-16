@@ -1,7 +1,8 @@
 -module(extlib).
 
 -export([unix_timestamp/0, operating_system/0, array_from_list/1, array_to_list/1,
-         array_set/3, array_get/2, array_size/1, array_count/1]).
+         array_set/3, array_get/2, array_size/1, array_count/1, array_reduce/3,
+         array_reduce_right/3]).
 
 unix_timestamp() ->
     {MegaSecs, Secs, _} = os:timestamp(),
@@ -53,7 +54,15 @@ array_get(Array, Index) ->
     end.
 
 array_size(Array) ->
-    array:sparse_size(Array).
+    array:size(Array).
 
 array_count(Array) ->
     length(array:sparse_to_list(Array)).
+
+array_reduce(Array, Acc, Fn) ->
+    Fn@1 = fun(_Index, Elem, Acc@2) -> Fn(Acc@2, Elem) end,
+    array:foldl(Fn@1, Acc, Array).
+
+array_reduce_right(Array, Acc, Fn) ->
+    Fn@1 = fun(_Index, Elem, Acc@2) -> Fn(Acc@2, Elem) end,
+    array:foldr(Fn@1, Acc, Array).

@@ -2,8 +2,6 @@
 //// Utilizes erlang's array and JavaScripts array type
 ////
 
-// TODO: functions: fold, fold_right
-
 pub external type Array(any)
 
 /// Creates an Array
@@ -133,4 +131,36 @@ if erlang {
 if javascript {
   external fn do_count(arr: Array(any)) -> Int =
     "../extlib.mjs" "array_count"
+}
+
+/// Reduces an array from left to right
+///
+pub fn fold(arr: Array(any), acc, f: fn(a, any) -> acc) -> acc {
+  do_fold(arr, acc, f)
+}
+
+if erlang {
+  pub external fn do_fold(Array(any), acc, fn(arr, any) -> acc) -> acc =
+    "extlib" "array_reduce"
+}
+
+if javascript {
+  pub external fn do_fold(Array(any), acc, fn(arr, any) -> acc) -> acc =
+    "../extlib.mjs" "array_reduce"
+}
+
+/// Reduces an array from right to left
+///
+pub fn fold_right(arr: Array(any), acc, f: fn(a, any) -> acc) -> acc {
+  do_fold_right(arr, acc, f)
+}
+
+if erlang {
+  pub external fn do_fold_right(Array(any), acc, fn(arr, any) -> acc) -> acc =
+    "extlib" "array_reduce_right"
+}
+
+if javascript {
+  pub external fn do_fold_right(Array(any), acc, fn(arr, any) -> acc) -> acc =
+    "../extlib.mjs" "array_reduce_right"
 }
