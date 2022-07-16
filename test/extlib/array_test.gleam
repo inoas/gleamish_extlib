@@ -10,6 +10,10 @@ pub fn from_list_and_to_list_test() {
   |> array.set(at: 4, to: 4)
   |> array.to_list
   |> should.equal([0, 1, 2, 4])
+
+  array.from_list([Nil])
+  |> array.to_list
+  |> should.equal([Nil])
 }
 
 pub fn new_test() {
@@ -72,4 +76,24 @@ pub fn count_test() {
   |> array.set(at: 3, to: 3)
   |> array.count
   |> should.equal(2)
+}
+
+if erlang {
+  pub fn other_test() {
+    array.new()
+    |> array.set(at: 1, to: Nil)
+    |> array.set(at: 3, to: Nil)
+    |> array.count
+    |> should.equal(2)
+  }
+}
+
+if javascript {
+  pub fn other_test() {
+    array.new()
+    |> array.set(at: 1, to: Nil)
+    |> array.set(at: 3, to: Nil)
+    |> array.count
+    |> should.equal(0)
+  }
 }
