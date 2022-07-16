@@ -58,11 +58,11 @@ pub fn set_test() {
   |> should.equal(Ok(0))
 }
 
-pub fn sparse_size_test() {
+pub fn size_test() {
   array.new()
   |> array.set(at: 1, to: 1)
   |> array.set(at: 3, to: 3)
-  |> array.sparse_size
+  |> array.size
   |> should.equal(4)
 }
 
