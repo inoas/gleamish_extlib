@@ -53,7 +53,7 @@ array_get(Array, Index) ->
     end.
 
 array_size(Array) ->
-	array:sparse_size(Array).
+    array:sparse_size(Array).
 
 array_count(Array) ->
-	length(array:sparse_to_list(Array)).
+    length(array:sparse_to_list(Array)).
