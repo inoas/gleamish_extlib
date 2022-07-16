@@ -118,6 +118,9 @@ if javascript {
 /// 2
 /// ```
 ///
+/// Notice: On JavaScript setting elements to `Nil` will result in count() omitting them
+///         in their sum as they map to `undefined` in the JavaScript runtime.
+///
 pub fn count(arr: Array(any)) -> Int {
   do_count(arr)
 }
