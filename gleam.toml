@@ -1,7 +1,7 @@
 name = "extlib"
 version = "0.1.0"
 
-# licences = ["Apache-2.0"]
+licences = ["Apache-2.0"]
 description = "A community driven extended standard library for Gleam"
 repository = { type = "github", user = "inoas", repo = "gleam_extlib" }
 # links = [{ title = "Website", href = "https://gleam.run" }]
