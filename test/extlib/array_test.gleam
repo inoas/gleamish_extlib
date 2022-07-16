@@ -4,7 +4,6 @@ import gleeunit/should
 pub fn from_list_and_to_list_test() {
   array.from_list([1, 2, 3])
   |> array.to_list
-  // TODO: On JS Gleam thinks this is a Tuple
   |> should.equal([1, 2, 3])
 }
 
@@ -15,7 +14,6 @@ pub fn new_test() {
 
   array.new()
   |> array.to_list
-  // TODO: On JS Gleam thinks this is a Tuple
   |> should.equal([])
 }
 
