@@ -1,4 +1,4 @@
-# An ExtLib for Gleam
+# An extended standard library for Gleam
 <!--
 [![Package Version](https://img.shields.io/hexpm/v/extlib)](https://hex.pm/packages/extlib)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/extlib/)
