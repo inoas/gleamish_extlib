@@ -66,3 +66,31 @@ if javascript {
   external fn do_get(arr: Array(any), idx: Int) -> Result(any, Nil) =
     "../extlib.mjs" "array_get"
 }
+
+pub fn sparse_size(arr: Array(any)) -> Int {
+  do_sparse_size(arr)
+}
+
+if erlang {
+  external fn do_sparse_size(arr: Array(any)) -> Int =
+    "extlib" "array_size"
+}
+
+if javascript {
+  external fn do_sparse_size(arr: Array(any)) -> Int =
+    "../extlib.mjs" "array_size"
+}
+
+pub fn count(arr: Array(any)) -> Int {
+  do_count(arr)
+}
+
+if erlang {
+  external fn do_count(arr: Array(any)) -> Int =
+    "extlib" "array_count"
+}
+
+if javascript {
+  external fn do_count(arr: Array(any)) -> Int =
+    "../extlib.mjs" "array_count"
+}

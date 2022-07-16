@@ -5,6 +5,11 @@ pub fn from_list_and_to_list_test() {
   array.from_list([1, 2, 3])
   |> array.to_list
   |> should.equal([1, 2, 3])
+
+  array.from_list([0, 1, 2])
+  |> array.set(at: 4, to: 4)
+  |> array.to_list
+  |> should.equal([0, 1, 2, 4])
 }
 
 pub fn new_test() {
@@ -51,4 +56,20 @@ pub fn set_test() {
   |> array.set(at: 0, to: 0)
   |> array.get(at: 0)
   |> should.equal(Ok(0))
+}
+
+pub fn sparse_size_test() {
+  array.new()
+  |> array.set(at: 1, to: 1)
+  |> array.set(at: 3, to: 3)
+  |> array.sparse_size
+  |> should.equal(4)
+}
+
+pub fn count_test() {
+  array.new()
+  |> array.set(at: 1, to: 1)
+  |> array.set(at: 3, to: 3)
+  |> array.count
+  |> should.equal(2)
 }
