@@ -1,7 +1,4 @@
-import {
-	Error,
-	Ok,
-} from "./gleam.mjs";
+import { Ok, Error, toList } from "./gleam.mjs";
 
 const Nil = undefined;
 
@@ -22,12 +19,12 @@ export function array_new() {
 };
 
 export function array_from_list(list) {
-	let arr = list.toArray(); // Gleam thinks Array is a Tuple, on JS
+	let arr = list.toArray();
 	return arr;
 };
 
 export function array_to_list(arr) {
-	return arr;
+	return toList(arr);
 };
 
 export function array_set(arr, idx, val) {
