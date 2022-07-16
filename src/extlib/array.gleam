@@ -133,10 +133,26 @@ if javascript {
     "../extlib.mjs" "array_count"
 }
 
-/// Reduces an array from left to right
+/// Maps an array via a given function
 ///
-pub fn fold(arr: Array(any), acc, f: fn(a, any) -> acc) -> acc {
-  do_fold(arr, acc, f)
+pub fn map(arr: Array(any_a), fun: fn(any_a) -> any_b) -> Array(any_b) {
+  do_map(arr, fun)
+}
+
+if erlang {
+  pub external fn do_map(Array(any_a), fn(any_a) -> any_b) -> Array(any_b) =
+    "extlib" "map"
+}
+
+if javascript {
+  pub external fn do_map(Array(any_a), fn(any_a) -> any_b) -> Array(any_b) =
+    "../extlib.mjs" "array_map"
+}
+
+/// Reduces an array from left to right via a given function
+///
+pub fn fold(arr: Array(any), acc, fun: fn(a, any) -> acc) -> acc {
+  do_fold(arr, acc, fun)
 }
 
 if erlang {
@@ -149,7 +165,7 @@ if javascript {
     "../extlib.mjs" "array_reduce"
 }
 
-/// Reduces an array from right to left
+/// Reduces an array from right to left via a given function
 ///
 pub fn fold_right(arr: Array(any), acc, f: fn(a, any) -> acc) -> acc {
   do_fold_right(arr, acc, f)

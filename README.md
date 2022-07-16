@@ -7,11 +7,7 @@ A Gleam library having features that could be in gleam_stdlib - or not ;-).
 
 All functions should run on all targets as good as possible: Erlang, NodeJS and Browsers.
 
-Current features:
-
-- basic interger and float calculation to be used in pipelines: add, multiply, subtract (divide is available in gleam_stdlib)
-- system unix timestamp
-- operating system name and version
+For current features, see [CHANGELOG.md](Changelog).
 
 Possible future features:
 
