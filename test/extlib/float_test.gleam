@@ -1,76 +1,76 @@
-import extlib/float
+import extlib/float2
 import gleeunit/should
 
 pub fn add_test() {
-  float.add(-1., -1.)
-  |> should.equal(-2.)
+  float2.add(-1.0, -1.0)
+  |> should.equal(-2.0)
 
-  float.add(1., -1.)
-  |> should.equal(0.)
+  float2.add(1.0, -1.0)
+  |> should.equal(0.0)
 
-  float.add(0., -1.)
-  |> should.equal(-1.)
+  float2.add(0.0, -1.0)
+  |> should.equal(-1.0)
 
-  float.add(0., 0.)
-  |> should.equal(0.)
+  float2.add(0.0, 0.0)
+  |> should.equal(0.0)
 
-  float.add(0., 1.)
-  |> should.equal(1.)
+  float2.add(0.0, 1.0)
+  |> should.equal(1.0)
 
-  float.add(1., 1.)
-  |> should.equal(2.)
+  float2.add(1.0, 1.0)
+  |> should.equal(2.0)
 }
 
 pub fn multiply_test() {
-  float.multiply(-1., -1.)
-  |> should.equal(1.)
+  float2.multiply(-1.0, -1.0)
+  |> should.equal(1.0)
 
-  float.multiply(1., -1.)
-  |> should.equal(-1.)
+  float2.multiply(1.0, -1.0)
+  |> should.equal(-1.0)
 
-  float.multiply(0., -1.)
-  |> should.equal(0.)
+  float2.multiply(0.0, -1.0)
+  |> should.equal(0.0)
 
-  float.multiply(0., 0.)
-  |> should.equal(0.)
+  float2.multiply(0.0, 0.0)
+  |> should.equal(0.0)
 
-  float.multiply(0., 1.)
-  |> should.equal(0.)
+  float2.multiply(0.0, 1.0)
+  |> should.equal(0.0)
 
-  float.multiply(1., 1.)
-  |> should.equal(1.)
+  float2.multiply(1.0, 1.0)
+  |> should.equal(1.0)
 
-  float.multiply(2., 2.)
-  |> should.equal(4.)
+  float2.multiply(2.0, 2.0)
+  |> should.equal(4.0)
 }
 
 pub fn subtract_test() {
-  float.subtract(-1., -1.)
-  |> should.equal(0.)
+  float2.subtract(-1.0, -1.0)
+  |> should.equal(0.0)
 
-  float.subtract(1., -1.)
-  |> should.equal(2.)
+  float2.subtract(1.0, -1.0)
+  |> should.equal(2.0)
 
-  float.subtract(0., -1.)
-  |> should.equal(1.)
+  float2.subtract(0.0, -1.0)
+  |> should.equal(1.0)
 
-  float.subtract(0., 0.)
-  |> should.equal(0.)
+  float2.subtract(0.0, 0.0)
+  |> should.equal(0.0)
 
-  float.subtract(0., 1.)
-  |> should.equal(-1.)
+  float2.subtract(0.0, 1.0)
+  |> should.equal(-1.0)
 
-  float.subtract(1., 1.)
-  |> should.equal(0.)
+  float2.subtract(1.0, 1.0)
+  |> should.equal(0.0)
 
-  float.subtract(2., 2.)
-  |> should.equal(0.)
+  float2.subtract(2.0, 2.0)
+  |> should.equal(0.0)
 
-  0.
-  |> float.subtract(subtrahend: 1.)
-  |> should.equal(-1.)
+  0.0
+  |> float2.subtract(subtrahend: 1.0)
+  |> should.equal(-1.0)
 
-  0.
-  |> float.subtract(minuend: 1.)
-  |> should.equal(1.)
+  0.0
+  |> float2.subtract(minuend: 1.0)
+  |> should.equal(1.0)
 }

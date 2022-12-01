@@ -19,6 +19,24 @@ Possible future features:
 - total and available RAM
 - remaining space on the current volume
 
+## FAQ
+
+### Why are modules named "2"
+
+The reason is so that they can live next to the stdlib without having to alias them.
+
+```gleam
+import gleam/order
+import extlib/order2
+
+// call order.compare in this module
+// call order2.reverse_fn in this module
+```
+
+### But Why are modules not existent in stdlib still suffixed
+
+Because they could exist in stdlib in future.
+
 ## Unit testing
 
 Runs unit tests against Erlang and JavaScript:
