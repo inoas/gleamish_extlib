@@ -1,0 +1,20 @@
+import gleam/order.{Order, reverse}
+
+/// Inverts a function returning an `Order`, so that once the function returns
+/// then less-than becomes greater-than and greater-than becomes less-than.
+///
+/// ## Examples
+///
+/// ``` gleam
+/// > import list
+/// > import int
+/// > [1, 2, 3] |> list.sort(by: order.reverse_fn(int.compare))
+/// [3, 2, 1]
+/// ```
+///
+pub fn reverse_fn(order_fn: fn(a, b) -> Order) -> fn(a, b) -> Order {
+  fn(a, b) {
+    order_fn(a, b)
+    |> reverse
+  }
+}
