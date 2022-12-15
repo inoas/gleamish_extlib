@@ -37,6 +37,7 @@ Runs unit tests against Erlang and JavaScript:
 
 ## Ideas for the future
 
+- `kernel.inspect` (same as `string.inspect`), `kernel.inspect_raw()` and `io.debug_raw()`.
 - Extended number types that only work around the Result type and return Errors if boundaries are exeecded (including BigInt support).
 - Aliases or implementations for common functions available in Python, JavaScript, PHP.
 - OS timezone name, OS timezone offset, OS time (non-monotonic time).
