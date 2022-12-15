@@ -6,7 +6,7 @@ import gleam/float
 ///
 /// ```gleam
 /// > absolute_difference(-10.0, 10.0)
-/// > 20.0
+/// 20.0
 /// ```
 ///
 /// ```gleam

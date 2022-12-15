@@ -80,7 +80,7 @@ if javascript {
 /// Returns the Array's size.
 /// The size is the inclusive range between the lowest and highest set index.
 ///
-/// ## Example:
+/// ## Examples
 ///
 /// ```gleam
 /// > array.new()
@@ -107,7 +107,7 @@ if javascript {
 /// Returns the Array's element count.
 /// The element count equals the amount of elements independent of their index.
 ///
-/// ## Example:
+/// ## Examples
 ///
 /// ```gleam
 /// > array.new()

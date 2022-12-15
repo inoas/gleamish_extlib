@@ -6,7 +6,7 @@ import gleam/int
 ///
 /// ```gleam
 /// > absolute_difference(-10, 10)
-/// > 20
+/// 20
 /// ```
 ///
 /// ```gleam
