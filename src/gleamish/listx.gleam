@@ -8,11 +8,15 @@ import gleam/option
 ///
 /// ## Examples
 ///
+/// ```gleam
 /// first_index([1, 2, 3], 2)
 /// Some(1)
+/// ```
 ///
+/// ```gleam
 /// first_index(in: [1, 2, 3], of: 4)
 /// None
+/// ```
 ///
 pub fn first_index(in list: List(any), of value: any) -> option.Option(Int) {
   do_first_index(list, value, 0)

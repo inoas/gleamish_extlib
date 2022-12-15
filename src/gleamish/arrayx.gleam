@@ -84,9 +84,9 @@ if javascript {
 ///
 /// ```gleam
 /// > array.new()
-///   |> array.set(at: 1, to: 1)
-///   |> array.set(at: 3, to: 3)
-///   |> array.size
+/// > |> array.set(at: 1, to: 1)
+/// > |> array.set(at: 3, to: 3)
+/// > |> array.size
 /// 4
 /// ```
 ///
@@ -111,9 +111,9 @@ if javascript {
 ///
 /// ```gleam
 /// > array.new()
-///   |> array.set(at: 1, to: 1)
-///   |> array.set(at: 3, to: 3)
-///   |> array.count
+/// > |> array.set(at: 1, to: 1)
+/// > |> array.set(at: 3, to: 3)
+/// > |> array.count
 /// 2
 /// ```
 ///
@@ -135,7 +135,7 @@ if javascript {
     "../gleamish_extlib.mjs" "array_count"
 }
 
-/// Maps an array via a given function
+/// Maps an Array via a given function.
 ///
 pub fn map(arr: Array(any_a), fun: fn(any_a) -> any_b) -> Array(any_b) {
   do_map(arr, fun)
@@ -151,7 +151,7 @@ if javascript {
     "../gleamish_extlib.mjs" "array_map"
 }
 
-/// Reduces an array from left to right via a given function
+/// Reduces an Array from left to right via a given function.
 ///
 pub fn fold(arr: Array(any), acc, fun: fn(a, any) -> acc) -> acc {
   do_fold(arr, acc, fun)

@@ -12,6 +12,7 @@ import gleam/int
 /// ```gleam
 /// > absolute_difference(0, -2)
 /// 2
+/// ```
 ///
 pub fn absolute_difference(a: Int, b: Int) -> Int {
   a - b

@@ -12,6 +12,7 @@ import gleam/float
 /// ```gleam
 /// > absolute_difference(0.0, -2.0)
 /// 2.0
+/// ```
 ///
 pub fn absolute_difference(a: Float, b: Float) -> Float {
   a -. b
