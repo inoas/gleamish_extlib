@@ -1,3 +1,4 @@
+import gleam/list
 import gleam/option
 
 /// Searches a list for the first occurrance of an element and returns its
@@ -18,14 +19,22 @@ import gleam/option
 /// None
 /// ```
 ///
-pub fn first_index(in list: List(any), of value: any) -> option.Option(Int) {
-  do_first_index(list, value, 0)
+pub fn first_index(in l: List(any), of value: any) -> option.Option(Int) {
+  do_first_index(l, value, 0)
 }
 
-fn do_first_index(list: List(any), value: any, index: Int) -> option.Option(Int) {
-  case list {
+fn do_first_index(l: List(any), value: any, index: Int) -> option.Option(Int) {
+  case l {
     [] -> option.None
     [head, ..] if head == value -> option.Some(index)
     [_, ..tail] -> do_first_index(tail, value, index + 1)
   }
+}
+
+/// Same as `list.length`.
+/// However `length` communicates a static property where in fact counting
+/// the length of a single linked list is an expensive operation.
+///
+pub fn count(l: List(any)) -> Int {
+  list.length(l)
 }
