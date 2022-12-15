@@ -13,8 +13,10 @@ import gleam/order
 /// [3, 2, 1]
 /// ```
 ///
-pub fn reverse_fn(order_fn: fn(a, b) -> order.Order) -> fn(a, b) -> order.Order {
-  fn(a, b) {
+pub fn reverse_fn(
+  order_fn: fn(any, any) -> order.Order,
+) -> fn(any, any) -> order.Order {
+  fn(a: any, b: any) {
     order_fn(a, b)
     |> order.reverse
   }
