@@ -6,9 +6,9 @@ import gleam/order
 /// ## Examples
 ///
 /// ``` gleam
-/// > import list
-/// > import orderx
-/// > import int
+/// > import gleam/int
+/// > import gleam/list
+/// > import gleamish/orderx
 /// > [1, 2, 3] |> list.sort(by: orderx.reverse_fn(int.compare))
 /// [3, 2, 1]
 /// ```
