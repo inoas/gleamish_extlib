@@ -17,7 +17,7 @@ pub fn tap(arg: a, effect: fn(a) -> b) -> a {
   arg
 }
 
-/// Allows to use the `==` operator in pipes and as a callback.
+/// Allows to use the equals (`==`) operator in pipes and as a callback.
 ///
 /// ## Examples
 ///
@@ -35,7 +35,7 @@ pub fn equals(a: any, to b: any) -> Bool {
   a == b
 }
 
-/// Allows to use the `==` operator in pipes and as a callback.
+/// Allows to use the not-equals (`!=`) operator in pipes and as a callback.
 ///
 /// ## Examples
 ///
