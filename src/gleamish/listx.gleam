@@ -8,20 +8,20 @@ import gleam/option
 ///
 /// ## Examples
 ///
-/// first_index_of([1, 2, 3], 2)
+/// first_index([1, 2, 3], 2)
 /// Some(1)
 ///
-/// first_index_of([1, 2, 3], 4)
+/// first_index(in: [1, 2, 3], of: 4)
 /// None
 ///
-pub fn first_index_of(list: List(a), elem: a) -> option.Option(Int) {
-  do_first_index_of(list, elem, 0)
+pub fn first_index(in list: List(any), of value: any) -> option.Option(Int) {
+  do_first_index(list, value, 0)
 }
 
-fn do_first_index_of(list: List(a), elem: a, index: Int) -> option.Option(Int) {
+fn do_first_index(list: List(any), value: any, index: Int) -> option.Option(Int) {
   case list {
     [] -> option.None
-    [head, ..] if head == elem -> option.Some(index)
-    [_, ..tail] -> do_first_index_of(tail, elem, index + 1)
+    [head, ..] if head == value -> option.Some(index)
+    [_, ..tail] -> do_first_index(tail, value, index + 1)
   }
 }
