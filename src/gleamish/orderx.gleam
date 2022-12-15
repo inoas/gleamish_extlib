@@ -7,8 +7,9 @@ import gleam/order
 ///
 /// ``` gleam
 /// > import list
+/// > import orderx
 /// > import int
-/// > [1, 2, 3] |> list.sort(by: order.reverse_fn(int.compare))
+/// > [1, 2, 3] |> list.sort(by: orderx.reverse_fn(int.compare))
 /// [3, 2, 1]
 /// ```
 ///
