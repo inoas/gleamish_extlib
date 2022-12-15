@@ -1,7 +1,7 @@
 import gleam/order
 
 /// Inverts a function returning an `Order`, so that once the function returns
-/// then less-than becomes greater-than and greater-than becomes less-than.
+/// `less-than` becomes `greater-than` xor `greater-than` becomes `less-than`.
 ///
 /// ## Examples
 ///
