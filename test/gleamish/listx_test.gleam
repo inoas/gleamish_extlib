@@ -11,9 +11,9 @@ pub fn first_index_of_test() {
   |> should.equal(option.None)
 }
 
-pub fn count() {
+pub fn count_test() {
   listx.count([])
-  |> should.equal(list.length([1, 2, 3]))
+  |> should.equal(list.length([]))
 
   listx.count([1])
   |> should.equal(list.length([1]))

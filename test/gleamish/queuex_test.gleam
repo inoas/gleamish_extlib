@@ -2,7 +2,7 @@ import gleam/queue
 import gleamish/queuex
 import gleeunit/should
 
-pub fn count() {
+pub fn count_test() {
   let q = queue.from_list([])
   queuex.count(q)
   |> should.equal(queue.length(q))
