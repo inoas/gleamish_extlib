@@ -3,6 +3,9 @@ import gleam/option
 /// Searches a list for the first occurrance of an element and returns its
 /// index.
 ///
+/// Notice: Indexing a list is very slow and not an encouraged.
+/// You likely want to use another data structure such as a map in this case.
+///
 /// ## Examples
 ///
 /// first_index_of([1, 2, 3], 2)
