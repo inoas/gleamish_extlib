@@ -1,4 +1,4 @@
--module(extlib).
+-module(gleamish_extlib).
 
 -export([unix_timestamp/0, operating_system/0, array_from_list/1, array_to_list/1,
          array_set/3, array_get/2, array_size/1, array_count/1, array_reduce/3,

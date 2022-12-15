@@ -4,12 +4,12 @@ pub fn unix_timestamp() {
 
 if erlang {
   external fn do_unix_timestamp() -> Int =
-    "extlib" "unix_timestamp"
+    "gleamish_extlib" "unix_timestamp"
 }
 
 if javascript {
   external fn do_unix_timestamp() -> Int =
-    "../extlib.mjs" "unix_timestamp"
+    "../gleamish_extlib.mjs" "unix_timestamp"
 }
 
 pub fn operating_system() {
@@ -18,10 +18,10 @@ pub fn operating_system() {
 
 if erlang {
   external fn do_operating_system() -> String =
-    "extlib" "operating_system"
+    "gleamish_extlib" "operating_system"
 }
 
 if javascript {
   external fn do_operating_system() -> String =
-    "../extlib.mjs" "operating_system"
+    "../gleamish_extlib.mjs" "operating_system"
 }

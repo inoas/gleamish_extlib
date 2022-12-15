@@ -1,4 +1,4 @@
-import gleam/order.{Order, reverse}
+import gleam/order
 
 /// Inverts a function returning an `Order`, so that once the function returns
 /// then less-than becomes greater-than and greater-than becomes less-than.
@@ -12,9 +12,9 @@ import gleam/order.{Order, reverse}
 /// [3, 2, 1]
 /// ```
 ///
-pub fn reverse_fn(order_fn: fn(a, b) -> Order) -> fn(a, b) -> Order {
+pub fn reverse_fn(order_fn: fn(a, b) -> order.Order) -> fn(a, b) -> order.Order {
   fn(a, b) {
     order_fn(a, b)
-    |> reverse
+    |> order.reverse
   }
 }

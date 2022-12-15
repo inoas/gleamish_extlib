@@ -1,5 +1,6 @@
 //// Constant lookup time arrays
-//// Utilizes erlang's array and JavaScripts array type
+////
+//// Utilizes Erlang's array and JavaScript's Array type.
 ////
 
 pub external type Array(any)
@@ -18,12 +19,12 @@ pub fn from_list(l: List(any)) -> Array(any) {
 
 if erlang {
   external fn do_from_list(l: List(any)) -> Array(any) =
-    "extlib" "array_from_list"
+    "gleamish_extlib" "array_from_list"
 }
 
 if javascript {
   external fn do_from_list(l: List(any)) -> Array(any) =
-    "../extlib.mjs" "array_from_list"
+    "../gleamish_extlib.mjs" "array_from_list"
 }
 
 /// Creates a List from an Array
@@ -36,12 +37,12 @@ pub fn to_list(arr: Array(any)) -> List(any) {
 
 if erlang {
   external fn do_to_list(arr: Array(any)) -> List(any) =
-    "extlib" "array_to_list"
+    "gleamish_extlib" "array_to_list"
 }
 
 if javascript {
   external fn do_to_list(arr: Array(any)) -> List(any) =
-    "../extlib.mjs" "array_to_list"
+    "../gleamish_extlib.mjs" "array_to_list"
 }
 
 /// Set's an Array's value at a given indexes and returns the updated Array
@@ -52,12 +53,12 @@ pub fn set(arr: Array(any), at idx: Int, to val: any) -> Array(any) {
 
 if erlang {
   external fn do_set(arr: Array(any), idx: Int, val: any) -> Array(any) =
-    "extlib" "array_set"
+    "gleamish_extlib" "array_set"
 }
 
 if javascript {
   external fn do_set(arr: Array(any), idx: Int, val: any) -> Array(any) =
-    "../extlib.mjs" "array_set"
+    "../gleamish_extlib.mjs" "array_set"
 }
 
 /// Get's an Array's value at a given index
@@ -68,12 +69,12 @@ pub fn get(arr: Array(any), at idx: Int) -> Result(any, Nil) {
 
 if erlang {
   external fn do_get(arr: Array(any), idx: Int) -> Result(any, Nil) =
-    "extlib" "array_get"
+    "gleamish_extlib" "array_get"
 }
 
 if javascript {
   external fn do_get(arr: Array(any), idx: Int) -> Result(any, Nil) =
-    "../extlib.mjs" "array_get"
+    "../gleamish_extlib.mjs" "array_get"
 }
 
 /// Returns the Array's size.
@@ -95,12 +96,12 @@ pub fn size(arr: Array(any)) -> Int {
 
 if erlang {
   external fn do_size(arr: Array(any)) -> Int =
-    "extlib" "array_size"
+    "gleamish_extlib" "array_size"
 }
 
 if javascript {
   external fn do_size(arr: Array(any)) -> Int =
-    "../extlib.mjs" "array_size"
+    "../gleamish_extlib.mjs" "array_size"
 }
 
 /// Returns the Array's element count.
@@ -116,8 +117,9 @@ if javascript {
 /// 2
 /// ```
 ///
-/// Notice: On JavaScript setting elements to `Nil` will result in count() omitting them
-///         in their sum as they map to `undefined` in the JavaScript runtime.
+/// Notice: On JavaScript setting elements to `Nil` will result in `count()`
+/// omitting them in their sum as they map to `undefined` in the JavaScript
+/// runtime.
 ///
 pub fn count(arr: Array(any)) -> Int {
   do_count(arr)
@@ -125,12 +127,12 @@ pub fn count(arr: Array(any)) -> Int {
 
 if erlang {
   external fn do_count(arr: Array(any)) -> Int =
-    "extlib" "array_count"
+    "gleamish_extlib" "array_count"
 }
 
 if javascript {
   external fn do_count(arr: Array(any)) -> Int =
-    "../extlib.mjs" "array_count"
+    "../gleamish_extlib.mjs" "array_count"
 }
 
 /// Maps an array via a given function
@@ -141,12 +143,12 @@ pub fn map(arr: Array(any_a), fun: fn(any_a) -> any_b) -> Array(any_b) {
 
 if erlang {
   pub external fn do_map(Array(any_a), fn(any_a) -> any_b) -> Array(any_b) =
-    "extlib" "map"
+    "gleamish_extlib" "map"
 }
 
 if javascript {
   pub external fn do_map(Array(any_a), fn(any_a) -> any_b) -> Array(any_b) =
-    "../extlib.mjs" "array_map"
+    "../gleamish_extlib.mjs" "array_map"
 }
 
 /// Reduces an array from left to right via a given function
@@ -157,12 +159,12 @@ pub fn fold(arr: Array(any), acc, fun: fn(a, any) -> acc) -> acc {
 
 if erlang {
   pub external fn do_fold(Array(any), acc, fn(arr, any) -> acc) -> acc =
-    "extlib" "array_reduce"
+    "gleamish_extlib" "array_reduce"
 }
 
 if javascript {
   pub external fn do_fold(Array(any), acc, fn(arr, any) -> acc) -> acc =
-    "../extlib.mjs" "array_reduce"
+    "../gleamish_extlib.mjs" "array_reduce"
 }
 
 /// Reduces an array from right to left via a given function
@@ -173,10 +175,10 @@ pub fn fold_right(arr: Array(any), acc, f: fn(a, any) -> acc) -> acc {
 
 if erlang {
   pub external fn do_fold_right(Array(any), acc, fn(arr, any) -> acc) -> acc =
-    "extlib" "array_reduce_right"
+    "gleamish_extlib" "array_reduce_right"
 }
 
 if javascript {
   pub external fn do_fold_right(Array(any), acc, fn(arr, any) -> acc) -> acc =
-    "../extlib.mjs" "array_reduce_right"
+    "../gleamish_extlib.mjs" "array_reduce_right"
 }
