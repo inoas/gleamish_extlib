@@ -5,13 +5,13 @@ import gleam/float
 /// ## Examples
 ///
 /// ```gleam
-/// > absolute_difference(-10, 10)
-/// > 20
+/// > absolute_difference(-10.0, 10.0)
+/// > 20.0
 /// ```
 ///
 /// ```gleam
-/// > absolute_difference(0, -2)
-/// 2
+/// > absolute_difference(0.0, -2.0)
+/// 2.0
 ///
 pub fn absolute_difference(a: Float, b: Float) -> Float {
   a -. b
