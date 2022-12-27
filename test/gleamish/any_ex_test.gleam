@@ -1,28 +1,28 @@
-import gleamish/anyx
+import gleamish/any_ex
 import gleeunit/should
 
 pub fn tap_test() {
   "Thanks Joe & Louis"
-  |> anyx.tap(fn(s: String) { s <> "... and Jose!" })
+  |> any_ex.tap(fn(s: String) { s <> "... and Jose!" })
   |> should.equal("Thanks Joe & Louis")
 }
 
 pub fn equals_test() {
   "a"
-  |> anyx.equals("a")
+  |> any_ex.equals("a")
   |> should.be_true
 
   "a"
-  |> anyx.equals(to: "b")
+  |> any_ex.equals(to: "b")
   |> should.be_false
 }
 
 pub fn differs_test() {
   "a"
-  |> anyx.differs("a")
+  |> any_ex.differs("a")
   |> should.be_false
 
   "a"
-  |> anyx.differs(from: "b")
+  |> any_ex.differs(from: "b")
   |> should.be_true
 }

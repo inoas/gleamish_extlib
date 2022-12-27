@@ -17,10 +17,10 @@ The reason is so that they can live next to the stdlib without having to alias t
 
 ```gleam
 import gleam/order
-import gleamish/orderx
+import gleamish/order_ex
 
 // call order.compare in this module
-// call orderx.reverse_fn in this module
+// call order_ex.reverse_fn in this module
 ```
 
 ### But why are modules not existent in stdlib still suffixed

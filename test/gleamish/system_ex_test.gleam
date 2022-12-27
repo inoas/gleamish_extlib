@@ -1,15 +1,15 @@
 import gleam/string
-import gleamish/systemx
+import gleamish/system_ex
 import gleeunit/should
 
 pub fn unix_timestamp_test() {
-  systemx.unix_timestamp()
-  |> fn(ts) { ts > 1657797675 }
+  system_ex.unix_timestamp()
+  |> fn(ts) { ts > 1_657_797_675 }
   |> should.be_true()
 }
 
 pub fn operating_system_test() {
-  systemx.operating_system()
+  system_ex.operating_system()
   |> fn(os) {
     os
     |> string.length > 2
