@@ -10,4 +10,4 @@ repository = { type = "github", user = "inoas", repo = "gleam_extlib" }
 gleam_stdlib = "~> 0.25"
 
 [dev-dependencies]
-gleeunit = "~> 0.7.2"
+glacier = "~> 0.1"

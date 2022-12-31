@@ -32,18 +32,18 @@ if javascript {
     JavaScriptTarget
   }
 
-  external fn is_browser() -> Bool =
+  pub external fn is_browser() -> Bool =
     "../gleamish_extlib.mjs" "is_browser"
 
-  external fn is_web_worker() -> Bool =
+  pub external fn is_web_worker() -> Bool =
     "../gleamish_extlib.mjs" "is_web_worker"
 
-  external fn is_node_js() -> Bool =
+  pub external fn is_node_js() -> Bool =
     "../gleamish_extlib.mjs" "is_nodejs"
 
-  external fn is_deno() -> Bool =
+  pub external fn is_deno() -> Bool =
     "../gleamish_extlib.mjs" "is_deno"
 
-  external fn has_dom() -> Bool =
+  pub external fn has_dom() -> Bool =
     "../gleamish_extlib.mjs" "has_dom"
 }

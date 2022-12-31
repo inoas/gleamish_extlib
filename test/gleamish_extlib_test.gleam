@@ -1,5 +1,5 @@
-import gleeunit
+import glacier
 
 pub fn main() {
-  gleeunit.main()
+  glacier.run()
 }
