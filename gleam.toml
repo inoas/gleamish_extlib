@@ -10,7 +10,7 @@ repository = { type = "github", user = "inoas", repo = "gleamish_extlib" }
 gleam_stdlib = "~> 0.25"
 
 [dev-dependencies]
-glacier = "~> 0.2.0"
+glacier = "~> 0.2.3"
 
 # Generated JavaScript specific configuration (optional)
 [javascript]
