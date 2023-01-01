@@ -57,4 +57,12 @@ If available on Hex this package can be added to your Gleam project:
 gleam add gleamish_extlib
 ```
 
-and its documentation can be found at <https://hexdocs.pm/gleamish_extlib>.
+<!--
+...and its documentation can be found at <https://hexdocs.pm/gleamish_extlib>.
+-->
+
+## Status
+
+Alpha quality, thus while this is still...
+
+![Under construction](https://web.archive.org/web/20090829023556im_/http://geocities.com/okitsugu/underconstruction.gif)
