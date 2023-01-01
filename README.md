@@ -1,10 +1,12 @@
 # Gleamish Extlib: An extended standard library for Gleam
 
+<!--
 [![Hex Package](https://img.shields.io/hexpm/v/gleamish_extlib?color=ffaff3&label=%F0%9F%93%A6)](https://hex.pm/packages/gleamish_extlib)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3?label=%F0%9F%93%9A)](https://hexdocs.pm/gleamish_extlib/)
 [![License](https://img.shields.io/hexpm/l/gleamish_extlib?color=ffaff3&label=%F0%9F%93%83)](https://github.com/inoas/gleamish_extlib/blob/main/LICENSE)
+-->
 
-A Gleam library having features that could be in gleam_stdlib... or should better not be ;-).
+A Gleam library having features that could be in `gleam_stdlib`... or should better not be ;-).
 
 All functions should run on all targets as good as possible: Erlang, NodeJS and browsers.
 
