@@ -3,11 +3,22 @@ version = "0.2.0"
 
 licences = ["Apache-2.0"]
 description = "A community driven extended standard library for Gleam"
-repository = { type = "github", user = "inoas", repo = "gleam_extlib" }
+repository = { type = "github", user = "inoas", repo = "gleamish_extlib" }
 # links = [{ title = "Website", href = "https://gleam.run" }]
 
 [dependencies]
 gleam_stdlib = "~> 0.25"
 
 [dev-dependencies]
-glacier = "~> 0.1"
+glacier = "~> 0.2.0"
+
+# Generated JavaScript specific configuration (optional)
+[javascript]
+# Generate TypeScript .d.ts files
+typescript_declarations = true
+
+[documentation]
+pages = [
+	{ title = "CHANGELOG", path = "changelog.html", source = "CHANGELOG.md" },
+	{ title = "LICENSE", path = "license.html", source = "LICENSE" },
+]
