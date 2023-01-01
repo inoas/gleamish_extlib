@@ -11,6 +11,7 @@ gleam_stdlib = "~> 0.25"
 
 [dev-dependencies]
 glacier = "~> 0.2.3"
+gleeunit = "~> 0.8"
 
 # Generated JavaScript specific configuration (optional)
 [javascript]
