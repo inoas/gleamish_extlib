@@ -1,5 +1,5 @@
 import gleamish/int_ex
-import glacier/should
+import gleeunit/should
 
 pub fn absolute_difference_test() {
   int_ex.absolute_difference(0, 0)
