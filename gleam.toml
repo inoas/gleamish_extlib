@@ -1,5 +1,5 @@
 name = "gleamish_extlib"
-version = "0.2.0"
+version = "0.3.0"
 
 licences = ["Apache-2.0"]
 description = "A community driven extended standard library for Gleam"
@@ -7,11 +7,12 @@ repository = { type = "github", user = "inoas", repo = "gleamish_extlib" }
 # links = [{ title = "Website", href = "https://gleam.run" }]
 
 [dependencies]
-gleam_stdlib = "~> 0.25"
+gleam_stdlib = "~> 0.26"
 
 [dev-dependencies]
-glacier = "~> 0.4"
-# gleeunit = "~> 0.9"
+# glacier = "~> 0.5"
+gleeunit = "~> 0.10"
+glychee = "~> 0.2"
 
 # Generated JavaScript specific configuration (optional)
 [javascript]

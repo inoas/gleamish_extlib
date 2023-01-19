@@ -2,14 +2,15 @@
 # You typically do not need to edit this file
 
 packages = [
-  { name = "fs", version = "8.6.1", build_tools = ["rebar3"], requirements = [], otp_app = "fs", source = "hex", outer_checksum = "61EA2BDAEDAE4E2024D0D25C63E44DCCF65622D4402DB4A2DF12868D1546503F" },
-  { name = "glacier", version = "0.4.0", build_tools = ["gleam"], requirements = ["fs", "shellout", "gleam_stdlib", "gleam_erlang", "glacier_gleeunit"], otp_app = "glacier", source = "hex", outer_checksum = "E128626A343E9EC04D2618D93E73D62A54634FD677CE9BF215CEF1149845BA0A" },
-  { name = "glacier_gleeunit", version = "0.9.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "glacier_gleeunit", source = "hex", outer_checksum = "58E7B883EF3CF5CD1EBD54B84D70E993D23ECB2F7AF6B2E5E14C56779BE2C968" },
-  { name = "gleam_erlang", version = "0.17.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_erlang", source = "hex", outer_checksum = "BAAA84F5BCC4477E809BA3E03BB3009A3894A6544C1511626C44408E39DB2AE6" },
-  { name = "gleam_stdlib", version = "0.25.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "AD0F89928E0B919C8F8EDF640484633B28DBF88630A9E6AE504617A3E3E5B9A2" },
-  { name = "shellout", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_stdlib"], otp_app = "shellout", source = "hex", outer_checksum = "310662075CDCB6E3928B03E3FD371B1DDCD691E1C709E606AB02195E36675D4E" },
+  { name = "benchee", version = "1.1.0", build_tools = ["mix"], requirements = ["deep_merge", "statistex"], otp_app = "benchee", source = "hex", outer_checksum = "7DA57D545003165A012B587077F6BA90B89210FD88074CE3C60CE239EB5E6D93" },
+  { name = "deep_merge", version = "1.0.0", build_tools = ["mix"], requirements = [], otp_app = "deep_merge", source = "hex", outer_checksum = "CE708E5F094B9CD4E8F2BE4F00D2F4250C4095BE93F8CD6D018C753894885430" },
+  { name = "gleam_stdlib", version = "0.26.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "6221F9D7A08B6D6DBCDD567B2BB7C4B2A7BBF4C04C6110757BE04635143BDEC8" },
+  { name = "gleeunit", version = "0.10.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "59E8B9B26BF732500C0F52C76DBA293480EA9E1E213FD9196BDE2A290E08C427" },
+  { name = "glychee", version = "0.2.6", build_tools = ["gleam"], requirements = ["benchee"], otp_app = "glychee", source = "hex", outer_checksum = "3F09B21ABFA3F9957139F647D56EDDACA7C35799D0C8AC5A988FA61AA8B81C22" },
+  { name = "statistex", version = "1.0.0", build_tools = ["mix"], requirements = [], otp_app = "statistex", source = "hex", outer_checksum = "FF9D8BEE7035028AB4742FF52FC80A2AA35CECE833CF5319009B52F1B5A86C27" },
 ]
 
 [requirements]
-glacier = "~> 0.4"
-gleam_stdlib = "~> 0.25"
+gleam_stdlib = "~> 0.26"
+gleeunit = "~> 0.10"
+glychee = "~> 0.2"
