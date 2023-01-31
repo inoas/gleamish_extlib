@@ -4,13 +4,20 @@
 packages = [
   { name = "benchee", version = "1.1.0", build_tools = ["mix"], requirements = ["deep_merge", "statistex"], otp_app = "benchee", source = "hex", outer_checksum = "7DA57D545003165A012B587077F6BA90B89210FD88074CE3C60CE239EB5E6D93" },
   { name = "deep_merge", version = "1.0.0", build_tools = ["mix"], requirements = [], otp_app = "deep_merge", source = "hex", outer_checksum = "CE708E5F094B9CD4E8F2BE4F00D2F4250C4095BE93F8CD6D018C753894885430" },
+  { name = "fs", version = "8.6.1", build_tools = ["rebar3"], requirements = [], otp_app = "fs", source = "hex", outer_checksum = "61EA2BDAEDAE4E2024D0D25C63E44DCCF65622D4402DB4A2DF12868D1546503F" },
+  { name = "glacier", version = "0.6.2", build_tools = ["gleam"], requirements = ["gleam_stdlib", "gleam_community_ansi", "glacier_gleeunit", "shellout", "fs", "gleam_erlang"], otp_app = "glacier", source = "hex", outer_checksum = "D375C18098355077D0CCCDBB1F2868B8DEA72EBDF008D124EDE5388D99127892" },
+  { name = "glacier_gleeunit", version = "0.10.12", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_stdlib"], otp_app = "glacier_gleeunit", source = "hex", outer_checksum = "D6290122E301B74404F0C1365334E59B3CE7435B85F151447AB1D0BAE91C516F" },
+  { name = "gleam_bitwise", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_bitwise", source = "hex", outer_checksum = "6064699EFBABB1CA392DCB193D0E8B402FB042B4B46857B01E6875E643B57F54" },
+  { name = "gleam_community_ansi", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_bitwise", "gleam_stdlib", "gleam_community_colour"], otp_app = "gleam_community_ansi", source = "hex", outer_checksum = "6E4E0CF2B207C1A7FCD3C21AA43514D67BC7004F21F82045CDCCE6C727A14862" },
+  { name = "gleam_community_colour", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_bitwise", "gleam_stdlib"], otp_app = "gleam_community_colour", source = "hex", outer_checksum = "5ED75D51ED4AA547A01B63CE8175BDDC68B0D652DADF2375F303581B7F8878CE" },
+  { name = "gleam_erlang", version = "0.17.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_erlang", source = "hex", outer_checksum = "BAAA84F5BCC4477E809BA3E03BB3009A3894A6544C1511626C44408E39DB2AE6" },
   { name = "gleam_stdlib", version = "0.26.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "6221F9D7A08B6D6DBCDD567B2BB7C4B2A7BBF4C04C6110757BE04635143BDEC8" },
-  { name = "gleeunit", version = "0.10.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "59E8B9B26BF732500C0F52C76DBA293480EA9E1E213FD9196BDE2A290E08C427" },
-  { name = "glychee", version = "0.2.6", build_tools = ["gleam"], requirements = ["benchee"], otp_app = "glychee", source = "hex", outer_checksum = "3F09B21ABFA3F9957139F647D56EDDACA7C35799D0C8AC5A988FA61AA8B81C22" },
+  { name = "glychee", version = "0.2.7", build_tools = ["gleam"], requirements = ["benchee"], otp_app = "glychee", source = "hex", outer_checksum = "62313873A64576D8797EFC0F02DFDC67092C295519E38539BCA2F598BB55F551" },
+  { name = "shellout", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib", "gleam_erlang"], otp_app = "shellout", source = "hex", outer_checksum = "310662075CDCB6E3928B03E3FD371B1DDCD691E1C709E606AB02195E36675D4E" },
   { name = "statistex", version = "1.0.0", build_tools = ["mix"], requirements = [], otp_app = "statistex", source = "hex", outer_checksum = "FF9D8BEE7035028AB4742FF52FC80A2AA35CECE833CF5319009B52F1B5A86C27" },
 ]
 
 [requirements]
+glacier = "~> 0.6.2"
 gleam_stdlib = "~> 0.26"
-gleeunit = "~> 0.10"
 glychee = "~> 0.2"

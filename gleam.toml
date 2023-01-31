@@ -10,14 +10,17 @@ repository = { type = "github", user = "inoas", repo = "gleamish_extlib" }
 gleam_stdlib = "~> 0.26"
 
 [dev-dependencies]
-# glacier = "~> 0.5"
-gleeunit = "~> 0.10"
+glacier = "~> 0.6.2"
 glychee = "~> 0.2"
 
 # Generated JavaScript specific configuration (optional)
 [javascript]
 # Generate TypeScript .d.ts files
 typescript_declarations = true
+
+[javascript.deno]
+allow_read = ["./"]
+allow_run = ["gleam"]
 
 [documentation]
 pages = [

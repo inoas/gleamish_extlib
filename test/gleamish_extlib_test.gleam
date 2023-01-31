@@ -1,7 +1,5 @@
-// import glacier
-import gleeunit
+import glacier
 
 pub fn main() {
-  // glacier.main()
-	gleeunit.main()
+  glacier.main()
 }
